@@ -95,7 +95,6 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 
 
 <br>
-<br>
 
 **Cleaned Data**
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleandata.png"></img>
