@@ -29,7 +29,7 @@ Predict the sale price of a particular piece of equipment at auction based on it
 *Note: This data is sourced from auction results postings and includes information on usage and equipment configurations.*
 
 **Evaluation:**
-The evaluation of your model will be based on Root Mean Squared Log Error.
+The evaluation of our model will be based on Root Mean Squared Log Error.
 Which is computed as follows:
 
 ![Root Mean Squared Logarithmic Error](images/rmsle.png)
