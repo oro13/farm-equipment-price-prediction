@@ -44,8 +44,9 @@ and *a<sub>i</sub>* are the actual values (the actual auction sale prices).
 
 Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks.
 
-
-<img src="https://image.flaticon.com/icons/svg/81/81203.svg" width="100" height="100" transform="rotate(90deg)">
+<p align="right">
+<img src="https://image.flaticon.com/icons/svg/81/81203.svg" width="100" height="100">
+<p>
 
 <br>
 
