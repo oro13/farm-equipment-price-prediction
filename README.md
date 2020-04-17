@@ -28,6 +28,16 @@ Predict the sale price of a particular piece of equipment at auction based on it
 
 *Note: This data is sourced from auction results postings and includes information on usage and equipment configurations.*
 
+**Evaluation:**
+The evaluation of your model will be based on Root Mean Squared Log Error.
+Which is computed as follows:
+
+![Root Mean Squared Logarithmic Error](images/rmsle.png)
+
+where *p<sub>i</sub>* are the predicted values (predicted auction sale prices) 
+and *a<sub>i</sub>* are the actual values (the actual auction sale prices).
+
+
 ---
 
 ## Plan of Attack
@@ -66,6 +76,41 @@ summary_model(X, y)
 ---
 
 ## Exploration
+
+```python
+# Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
+X = clean_df.drop(columns=['SalePrice'])
+y = clean_df['SalePrice']
+
+y.hist(bins=100)
+plt.show()
+```
+
+<details>
+  <summary>
+    Sales Price Histogram
+  </summary>  
+  <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/prelogTargetHist.png"></img>
+</details>
+
+
+
+```python
+# Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
+X = clean_df.drop(columns=['SalePrice'])
+# Log the Target
+y = np.log(clean_df['SalePrice'])
+
+y.hist(bins=100)
+plt.show()
+```
+<details>
+  <summary>
+    Sales Price Histogram (Log)
+  </summary>  
+  <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/postlogTargetHist.png"></img>
+</details>
+
 
 ---
 
