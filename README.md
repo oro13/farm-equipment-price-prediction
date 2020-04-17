@@ -45,6 +45,7 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
 </details>
 
+<br>
 
 **Baseline Model: Linear Regression**
 
