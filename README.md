@@ -48,6 +48,20 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 
 **Baseline Model: Linear Regression**
 
+```python
+# Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
+X = clean_df.drop(columns=['SalePrice'])
+y = clean_df['SalePrice']
+
+summary_model(X, y)
+```
+<details>
+  <summary>
+    OLS Summary 
+  </summary>
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/olssummary.png"></img>
+</details>
+
 ---
 
 ## Exploration
