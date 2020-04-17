@@ -29,7 +29,7 @@ Predict the sale price of a particular piece of equipment at auction based on it
 *Note: This data is sourced from auction results postings and includes information on usage and equipment configurations.*
 
 **Evaluation:**
-The evaluation of your model will be based on Root Mean Squared Log Error.
+The evaluation of our model will be based on Root Mean Squared Log Error.
 Which is computed as follows:
 
 ![Root Mean Squared Logarithmic Error](images/rmsle.png)
@@ -42,8 +42,12 @@ and *a<sub>i</sub>* are the actual values (the actual auction sale prices).
 
 ## Plan of Attack
 
-Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks. 
+<img align="right" src="https://image.flaticon.com/icons/svg/81/81203.svg" width="100" height="100">
+Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks.
 
+<br>
+<br>
+<br>
 
 **Cleaning Data:**
 With the intent of using Linear Regression in mind, we processed and cleaned some of the data in order for this to be possible. Using a custom function, we dropped rows that had a high percentage of null values.
@@ -53,6 +57,7 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
     Columns with more than 50% Missing Values
   </summary>
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
+
 </details>
 
 <br>
