@@ -80,6 +80,11 @@ df.drop(columns=['UsageBand','Blade_Extension', 'Blade_Width', 'Enclosure_Type',
 **One Hot Encoding:**
 With the intent of using Linear Regression in mind, we processed and cleaned some of the data in order for this to be possible. Using a custom function, we dropped rows that had a high percentage of null values.
 
+<br>
+
+<img align="left" src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png"></img>
+<img align="right" src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png"></img>
+
 
 <br>
 
