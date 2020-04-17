@@ -46,7 +46,8 @@ and *a<sub>i</sub>* are the actual values (the actual auction sale prices).
 Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks.
 
 <br>
-
+<br>
+<br>
 
 **Cleaning Data:**
 With the intent of using Linear Regression in mind, we processed and cleaned some of the data in order for this to be possible. Using a custom function, we dropped rows that had a high percentage of null values.
