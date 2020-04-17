@@ -64,7 +64,7 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 
 <br>
 
-** -> **
+**->**
 
 <br>
 
