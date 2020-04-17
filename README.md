@@ -1,7 +1,7 @@
 ![Regression CS Header](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/regressionedaheader.png)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Maintained%3F-In Progress-yellow?style=flat-square"></img>
+  <img src="https://img.shields.io/badge/Maintained%3F-Presented!-blue?style=flat-square"></img>
   <img src="https://img.shields.io/badge/Dream%20Team-YES-green?style=flat-square"></img>
 </p>
 
