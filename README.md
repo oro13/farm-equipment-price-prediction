@@ -48,6 +48,11 @@ Initally going into this case study, we decided to tackle the tasks of cleaning 
 <br>
 <br>
 
+**Initial Data**
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/dirtydata.png"></img>
+
+<br>
+
 **Cleaning Data:**
 With the intent of using Linear Regression in mind, we processed and cleaned some of the data in order for this to be possible. Using a custom function, we dropped rows that had a high percentage of null values.
 
@@ -58,17 +63,6 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
 </details>
 
-
-**Initial Data**
-<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/dirtydata.png"></img>
-
-<br>
-
-**Cleaned Data**
-<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleandata.png"></img>
-
-
-<br>
 <br>
 
 **One Hot Encoding:**
@@ -82,6 +76,10 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 </details>
 
 <br>
+
+
+**Cleaned Data**
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleandata.png"></img>
 
 
 ---
