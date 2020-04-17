@@ -78,7 +78,7 @@ df.drop(columns=['UsageBand','Blade_Extension', 'Blade_Width', 'Enclosure_Type',
 <br>
 
 **One Hot Encoding:**
-With the intent of using Linear Regression in mind, we processed and cleaned some of the data in order for this to be possible. Using a custom function, we dropped rows that had a high percentage of null values.
+We noticed that there were groupings of items within certain columns and decided to use OHE to convert these values to binary values.
 
 <br>
 
