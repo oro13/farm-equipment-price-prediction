@@ -15,7 +15,7 @@
  |  **[Introduction](#introduction)**  |
  **[Plan of Attack](#plan-of-attack)**  |
  **[Exploration](#exploration)**  |
- **[Analysis & Modeling](#analysis-&-modeling)**  |
+ **[Analysis & Modeling](#analysis-and-modeling)**  |
  **[Performance](#performance)**  |
  **[Takeaways](#takeaways)**  |
 
@@ -68,7 +68,7 @@ summary_model(X, y)
 
 ---
 
-## Analysis & Modeling
+## Analysis and Modeling
 
 ---
 
