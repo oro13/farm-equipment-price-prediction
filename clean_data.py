@@ -74,7 +74,7 @@ def clean_df(df):
     df.drop(columns=['ProductGroup', 'Enclosure','Pad_Type', 'fiModelDesc','Forks',
                      'Ride_Control','Stick','Transmission','Turbocharged','Hydraulics',
                      'Tire_Size','Coupler','Track_Type', 'Undercarriage_Pad_Width',
-                     'Stick_Length','Thumb','Pattern_Changer','Grouser_Type'
+                     'Stick_Length','Thumb','Pattern_Changer','Grouser_Type', 'MachineID', 'ModelID'
                     ], inplace=True)
     
     return df
