@@ -63,6 +63,18 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
 </details>
 
+```python
+df.drop(columns=['UsageBand','Blade_Extension', 'Blade_Width', 'Enclosure_Type',
+                     'Engine_Horsepower', 'Pushblock', 'Scarifier', 'Tip_Control',
+                     'Coupler_System', 'Grouser_Tracks', 'Hydraulics_Flow','Backhoe_Mounting', 
+                     'Blade_Type', 'Travel_Controls','Differential_Type','Steering_Controls',
+                     'SalesID','fiBaseModel','fiSecondaryDesc',
+                     'fiModelSeries','fiModelDescriptor', 'auctioneerID',
+                     'Drive_System', 'datasource'
+                    ], inplace=True)
+```
+
+
 <br>
 
 **One Hot Encoding:**
@@ -70,7 +82,7 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 
 <details>
   <summary>
-    Columns with more than 50% Missing Values
+    One Hot En
   </summary>
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
 </details>
