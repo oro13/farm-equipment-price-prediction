@@ -11,6 +11,6 @@
  **[Plan of Attack](#plan-of-attack)**  |
  **[Exploration](#exploration)**  |
  **[Analysis & Modeling](#analysis-&-modeling)**  |
- **[Performance](#performance)**  |
- **[Takeaways](#takeaways)**  |
+ **[Performance](#performance)**  <br>
+ | **[Takeaways](#takeaways)**  |
 ---
