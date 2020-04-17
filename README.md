@@ -4,7 +4,11 @@
   <img src="https://img.shields.io/badge/Maintained%3F-In Progress-green?style=flat-square"></img>
 </p>
 
-
+### Contributors
+|  [Feli Gentle](https://github.com/oro13)  |
+ [Tyler Woods](https://github.com/tylerjwoods)  |
+ [Wesley Nguyen](https://github.com/boogiedev)  |
+   
 ---
 
 ## Sections:
