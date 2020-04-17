@@ -122,7 +122,7 @@ plt.show()
 
 <details>
   <summary>
-    Cross Validation Errors (Pre-Log)
+    RMSLE: Cross Validation Errors (Pre-Log)
   </summary>  
 <p>
  
@@ -140,8 +140,8 @@ for idx, (train, test) in enumerate(kf.split(X)):
     y_hat = model.predict(X_array[test])
     y_train = model.predict(X_array[train])
     
-    train_cv_errors[idx] = rmse(y_array[train], y_train)
-    test_cv_errors[idx] = rmse(y_array[test], y_hat)
+    train_cv_errors[idx] = rmsle(y_array[train], y_train)
+    test_cv_errors[idx] = rmsle(y_array[test], y_hat)
 
 train_cv_errors, test_cv_errors
 ```  
@@ -151,12 +151,53 @@ train_cv_errors, test_cv_errors
 
 </details>
 
+```python
+(array([15049.50547112, 15077.59371394, 15064.28882563, 15064.36987342,
+        15070.18482936, 15076.58622347, 15073.01997752, 15054.20483307,
+        15063.71687785, 15065.55533862]),
+ array([15214.63656495, 14961.68865696, 15081.91996435, 15081.54609959,
+        15028.80838643, 14971.77556378, 15003.28669371, 15172.473795  ,
+        15086.84958932, 15070.36424814]))
+```
+
+
+<br>
+
+<details>
+  <summary>
+    RMSLE: Cross Validation Errors (Post-Log)
+  </summary>  
+<p>
+ 
+  
+```python
+n_folds = 10
+kf = KFold(n_splits=n_folds, shuffle=True)
+test_cv_errors, train_cv_errors = np.empty(n_folds), np.empty(n_folds)
+X_array = np.array(X)
+y_array = np.log(np.array(y))
+
+for idx, (train, test) in enumerate(kf.split(X)):
+    model = LinearRegression()
+    model.fit(X_array[train], y_array[train])
+    y_hat = model.predict(X_array[test])
+    y_train = model.predict(X_array[train])
+    
+    train_cv_errors[idx] = rmsle(y_array[train], y_train)
+    test_cv_errors[idx] = rmsle(y_array[test], y_hat)
+
+train_cv_errors, test_cv_errors
+```  
+
+</p>
+
+</details>
 
 ```python
-(array([0.40606488, 0.40622868, 0.40621928, 0.40665517, 0.40652397,
-        0.40657838, 0.40608442, 0.40651964, 0.40617827, 0.40609071]),
- array([0.40858626, 0.40711805, 0.40721177, 0.40327332, 0.40446531,
-        0.403964  , 0.40841977, 0.40449285, 0.40757546, 0.40838406]))
+(array([0.03681113, 0.03676828, 0.03682234, 0.03681786, 0.03676724,
+        0.03680314, 0.03682065, 0.0368372 , 0.03679243, 0.0367921 ]),
+ array([0.03673228, 0.03713358, 0.03661953, 0.03666285, 0.03713166,
+        0.03680484, 0.03665091, 0.03649925, 0.03690903, 0.03691538]))
 ```
 
 
