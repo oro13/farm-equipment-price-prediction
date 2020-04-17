@@ -83,11 +83,12 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 <br>
 
 <img align="left" src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png"></img>
+
 <img align="right" src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheRipperVal.png"></img>
 
 
 <br>
-
+<br>
 
 **Cleaned Data**
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleandata.png"></img>
