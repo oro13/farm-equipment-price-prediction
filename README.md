@@ -74,6 +74,22 @@ df.drop(columns=['UsageBand','Blade_Extension', 'Blade_Width', 'Enclosure_Type',
                     ], inplace=True)
 ```
 
+**Cleaning Functions:**
+```python
+def getNullCount(df:pd.DataFrame) -> None:
+    """Prints metrics of null values from a dataframe"""
+    columns = df.columns
+    for col in columns:
+        total_nan = sum(pd.isna(df[col]))
+        total_all = df[col].size
+        print(f"Column: {col}  Total:{total_all}  Missing:{total_nan}  {round(total_nan/total_all, 2) * 100}%")
+
+# One Hot Encode Categoricals
+def set_ohe(df:pd.DataFrame, col_name:str) -> None:
+    """One Hot Encodes Dataframe column"""
+    for val in auction_train[col_name].value_counts().index:
+        df[f"{col_name}: {val}"] = df[col_name].map(lambda x: 1.0 if x==val else 0.0)
+```
 
 <br>
 
