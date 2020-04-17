@@ -240,8 +240,17 @@ train_cv_errors, test_cv_errors
 
 ## Performance
 
+Using data from the file data/test.csv, we used our model to obtain an RMSLE of 0.573. 
+
+Note: The best RMSLE was only 0.23 (obviously lower is better).  Note that if you were to simply guess the median auction price for all the pieces of equipment in the test set you would get an RMSLE of about 0.7.
+
+
 ---
 
 ## Takeaways 
+
+Cleaning the data and finding the important columns was the biggest hurdle. We decided to do one-hot-encoding for multiple columns of the dataset and drop most of the other columns.
+
+Once we felt that we had a data set that was cleaned and ready, using different models was quick.
 
 ---
