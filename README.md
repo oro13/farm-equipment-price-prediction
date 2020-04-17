@@ -83,15 +83,9 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 <br>
 
 
-<details>
-  <summary>
-    One Hot Encoding Examples
-  </summary>
-<img align="left" src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png"></img>
-
-<img align="right" src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheRipperVal.png"></img>
-
-</details>
+Product Size             |  Ripper Values
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png)  |  ![](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheRipperVal.png)
 
 
 <br>
@@ -245,6 +239,8 @@ train_cv_errors, test_cv_errors
 ---
 
 ## Performance
+
+
 
 Using data from the file data/test.csv, we used our model to obtain an RMSLE of 0.573. 
 
