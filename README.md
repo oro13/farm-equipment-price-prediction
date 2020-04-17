@@ -6,6 +6,7 @@
 
 
 ---
+
 ## Sections:
  |  **[Introduction](#introduction)**  |
  **[Plan of Attack](#plan-of-attack)**  |
@@ -13,4 +14,29 @@
  **[Analysis & Modeling](#analysis-&-modeling)**  |
  **[Performance](#performance)**  <br>
  | **[Takeaways](#takeaways)**  |
+
+---
+
+## Introduction
+
+---
+
+## Plan of Attack
+
+---
+
+## Exploration
+
+---
+
+## Analysis & Modeling
+
+---
+
+## Performance
+
+---
+
+## Takeaways 
+
 ---
