@@ -23,7 +23,7 @@ def clean_df(df):
                      'Blade_Type', 'Travel_Controls','Differential_Type','Steering_Controls',
                      'SalesID','fiBaseModel','fiSecondaryDesc',
                      'fiModelSeries','fiModelDescriptor', 'auctioneerID',
-                     'Drive_System'
+                     'Drive_System', 'datasource'
                     ], inplace=True)
     
     # Find the logs of target values, SalePrice
