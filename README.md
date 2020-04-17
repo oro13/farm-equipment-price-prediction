@@ -263,9 +263,28 @@ train_cv_errors, test_cv_errors
 **OLS Summary on Features**
 <img src="https://github.com/boogiedev/regression-case-study/blob/master/images/olsBetaResults.png" > </img>
 
+<br>
+
+
 **Ridge Regression**
 
 We decided that using a Ridge Regression would be the best model for this situation in order to find out which features would be most important.
+
+```python
+y = np.array(clean_auction['SalePrice'])
+X = np.array(clean_auction.drop(columns='SalePrice'))
+
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+model = Pipeline([('standardize', StandardScaler()),
+                   ('regressor', Ridge())])
+
+model.fit(X_train, y_train)
+```
+<img src="https://github.com/boogiedev/regression-case-study/blob/master/images/pipeline.png"></img>
+
+
+<br>
 
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/beta_ridge_2.png"> </img>
 
