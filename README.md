@@ -118,6 +118,7 @@ summary_model(X, y)
 
 <br>
 
+
 ```python
 # Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
 X = clean_df.drop(columns=['SalePrice'])
@@ -126,6 +127,7 @@ y = clean_df['SalePrice']
 y.hist(bins=100)
 plt.show()
 ```
+> To get a sense of what the distribution of our target values were, we plotted it in a histogram
 
 <details>
   <summary>
@@ -145,6 +147,8 @@ y = np.log(clean_df['SalePrice'])
 y.hist(bins=100)
 plt.show()
 ```
+> As seen below, the distribution of the target values are bunched to the left, so we needed to find a way to center the mean in order to create a more accurate model
+
 <details>
   <summary>
     Sales Price Histogram (Log)
