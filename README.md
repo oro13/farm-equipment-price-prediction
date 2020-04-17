@@ -260,13 +260,13 @@ train_cv_errors, test_cv_errors
 
 ## Performance
 
-**OLS Summary on Features**
+**OLS Summary on Features**<br>
 <img src="https://github.com/boogiedev/regression-case-study/blob/master/images/olsBetaResults.png" > </img>
 
 <br>
 
 
-**Ridge Regression**
+**Ridge Regression** <br>
 
 We decided that using a Ridge Regression would be the best model for this situation in order to find out which features would be most important.
 
@@ -283,6 +283,19 @@ model.fit(X_train, y_train)
 ```
 <img src="https://github.com/boogiedev/regression-case-study/blob/master/images/pipeline.png"></img>
 
+<br>
+
+**Model Prediction** <br>
+```python
+y_hat_train = model.predict(X_train)
+y_hat_test = model.predict(X_test)
+
+print('Training error: {}'.format(rmsle(y_train, y_hat_train)))
+print('Testing error: {}'.format(rmsle(y_test, y_hat_test)))
+```
+Training Error:             |  Testing Error
+:-------------------------:|:-------------------------:
+0.0368246720958709  |  0.03672861629228472
 
 <br>
 
