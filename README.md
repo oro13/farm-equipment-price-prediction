@@ -56,7 +56,34 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
     Columns with more than 50% Missing Values
   </summary>
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
+</details>
 
+
+**Initial Data**
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/dirtydata.png"></img>
+
+<br>
+
+** -> **
+
+<br>
+
+
+**Cleaned Data**
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleandata.png"></img>
+
+
+<br>
+<br>
+
+**One Hot Encoding:**
+With the intent of using Linear Regression in mind, we processed and cleaned some of the data in order for this to be possible. Using a custom function, we dropped rows that had a high percentage of null values.
+
+<details>
+  <summary>
+    Columns with more than 50% Missing Values
+  </summary>
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
 </details>
 
 <br>
@@ -67,6 +94,8 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 ## Analysis and Modeling
 
 **Baseline Model: Linear Regression**
+
+We started out using a Linear Regression as a baseline model to start with, and then figure out where to go from there. 
 
 ```python
 # Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
