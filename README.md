@@ -260,6 +260,11 @@ train_cv_errors, test_cv_errors
 
 ## Performance
 
+**OLS Summary on Features**
+<img src="https://github.com/boogiedev/regression-case-study/blob/master/images/olsBetaResults.png" > </img>
+
+**Ridge Regression**
+
 We decided that using a Ridge Regression would be the best model for this situation in order to find out which features would be most important.
 
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/beta_ridge_2.png"> </img>
