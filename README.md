@@ -244,7 +244,9 @@ train_cv_errors, test_cv_errors
 
 ## Performance
 
+We decided that using a Ridge Regression would be the best model for this situation in order to find out which features would be most important.
 
+<img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/beta_ridge_2.png"> </img>
 
 Using data from the file data/test.csv, we used our model to obtain an RMSLE of 0.573. 
 
