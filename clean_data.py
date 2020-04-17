@@ -26,6 +26,10 @@ def clean_df(df):
                      'Drive_System'
                     ], inplace=True)
     
+    # Find the logs of target values, SalePrice
+    
+    df['SalePrice'] = np.log(df['SalePrice'])
+    
     # Convert MachineHoursCurrent Meter "NaN" values to the average value
     df['MachineHoursCurrentMeter'].fillna(df['MachineHoursCurrentMeter'].mean(), inplace=True)
     
