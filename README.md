@@ -14,7 +14,6 @@
 ## Sections:
  |  **[Introduction](#introduction)**  |
  **[Plan of Attack](#plan-of-attack)**  |
- **[Exploration](#exploration)**  |
  **[Analysis & Modeling](#analysis-and-modeling)**  |
  **[Performance](#performance)**  |
  **[Takeaways](#takeaways)**  |
@@ -62,6 +61,11 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
 
 <br>
 
+
+---
+
+## Analysis and Modeling
+
 **Baseline Model: Linear Regression**
 
 ```python
@@ -78,9 +82,7 @@ summary_model(X, y)
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/olssummary.png"></img>
 </details>
 
----
-
-## Exploration
+<br>
 
 ```python
 # Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
@@ -98,7 +100,7 @@ plt.show()
   <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/prelogTargetHist.png"></img>
 </details>
 
-
+<br>
 
 ```python
 # Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
@@ -116,10 +118,48 @@ plt.show()
   <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/postlogTargetHist.png"></img>
 </details>
 
+<br>
 
----
+<details>
+  <summary>
+    Cross Validation Errors (Pre-Log)
+  </summary>  
+<p>
+ 
+  
+```python
+n_folds = 10
+kf = KFold(n_splits=n_folds, shuffle=True)
+test_cv_errors, train_cv_errors = np.empty(n_folds), np.empty(n_folds)
+X_array = np.array(X)
+y_array = np.array(y)
 
-## Analysis and Modeling
+for idx, (train, test) in enumerate(kf.split(X)):
+    model = LinearRegression()
+    model.fit(X_array[train], y_array[train])
+    y_hat = model.predict(X_array[test])
+    y_train = model.predict(X_array[train])
+    
+    train_cv_errors[idx] = rmse(y_array[train], y_train)
+    test_cv_errors[idx] = rmse(y_array[test], y_hat)
+
+train_cv_errors, test_cv_errors
+```  
+
+
+</p>
+
+</details>
+
+
+```python
+(array([0.40606488, 0.40622868, 0.40621928, 0.40665517, 0.40652397,
+        0.40657838, 0.40608442, 0.40651964, 0.40617827, 0.40609071]),
+ array([0.40858626, 0.40711805, 0.40721177, 0.40327332, 0.40446531,
+        0.403964  , 0.40841977, 0.40449285, 0.40757546, 0.40838406]))
+```
+
+
 
 ---
 
