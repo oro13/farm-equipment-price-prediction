@@ -3,9 +3,10 @@ import numpy as np
 import us
 import re
 
-def set_ohe(df:pd.DataFrame, col_name:str) -> None:
-    for val in auction_train[col_name].value_counts().index:
+def set_ohe(df:pd.DataFrame, col_name:str):
+    for val in df[col_name].value_counts().index:
         df[f"{col_name}: {val}"] = df[col_name].map(lambda x: 1.0 if x==val else 0.0 )
+    return df
         
 def getReMax(val:str) -> np.float:
     """Returns maximum number in a string using regex"""
@@ -13,7 +14,7 @@ def getReMax(val:str) -> np.float:
     nums = map(np.float, search) 
     return max(nums)
 
-def clean_data(df):
+def clean_df(df):
     
     #drop some columns
     df.drop(columns=['UsageBand','Blade_Extension', 'Blade_Width', 'Enclosure_Type',
@@ -29,11 +30,11 @@ def clean_data(df):
     df['MachineHoursCurrentMeter'].fillna(df['MachineHoursCurrentMeter'].mean(), inplace=True)
     
     # Clean Ripper Values
-    df = set_ohe(auction_train, "Ripper")
+    df = set_ohe(df, "Ripper")
     df.drop(columns='Ripper', inplace=True)
     
     # Clean ProductSize Values
-    df = set_ohe(auction_train, "ProductSize")
+    df = set_ohe(df, "ProductSize")
     df.drop(columns='ProductSize', inplace=True)
 
     
@@ -48,8 +49,8 @@ def clean_data(df):
     df.drop(columns='fiProductClassDesc', inplace=True)
     
     # Make a horsepower column
-    auction_train_hp = df[df["Power Rating"].str.contains('horsepower', case=False)]
-    df['HorsePower'] = auction_train_hp['Power Rating'].map(getReMax)
+    df_hp = df[df["Power Rating"].str.contains('horsepower', case=False)]
+    df['HorsePower'] = df_hp['Power Rating'].map(getReMax)
     df['HorsePower'].fillna(df['HorsePower'].mean(), inplace=True)
     
     set_ohe(df, "Vehicle Type")
@@ -58,7 +59,7 @@ def clean_data(df):
     df.drop(columns='ProductGroupDesc', inplace=True)
     
     # Get year of sale only from saledate
-    df['saledate'] = pd.to_datetime(auction_train['saledate'])
+    df['saledate'] = pd.to_datetime(df['saledate'])
     df['yearsold'] = df['saledate'].map(lambda x: x.year)
     df.drop(columns='saledate', inplace=True)
     
@@ -76,3 +77,4 @@ def clean_data(df):
                      'Stick_Length','Thumb','Pattern_Changer','Grouser_Type'
                     ], inplace=True)
     
+    return df
