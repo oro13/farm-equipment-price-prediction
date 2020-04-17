@@ -42,7 +42,12 @@ and *a<sub>i</sub>* are the actual values (the actual auction sale prices).
 
 ## Plan of Attack
 
-Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks. 
+Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks.
+
+
+<img src="https://image.flaticon.com/icons/svg/81/81203.svg" width="100" height="100" transform="rotate(90deg)">
+
+<br>
 
 
 **Cleaning Data:**
@@ -53,6 +58,7 @@ With the intent of using Linear Regression in mind, we processed and cleaned som
     Columns with more than 50% Missing Values
   </summary>
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleaningdata1.png"></img>
+
 </details>
 
 <br>
