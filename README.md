@@ -126,7 +126,7 @@ y = clean_df['SalePrice']
 
 summary_model(X, y)
 ```
-<details>
+<details open>
   <summary>
     OLS Summary 
   </summary>
