@@ -146,7 +146,7 @@ plt.show()
 ```
 > To get a sense of what the distribution of our target values were, we plotted it in a histogram
 
-<details>
+<details open>
   <summary>
     Sales Price Histogram
   </summary>  
@@ -166,7 +166,7 @@ plt.show()
 ```
 > As seen below, the distribution of the target values are bunched to the left, so we needed to find a way to center the mean in order to create a more accurate model
 
-<details>
+<details open>
   <summary>
     Sales Price Histogram (Log)
   </summary>  
