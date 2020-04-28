@@ -324,7 +324,9 @@ Using data from the file data/test.csv, we used our model to obtain an RMSLE of 
 
 Note: The best RMSLE was only 0.23 (obviously lower is better).  Note that if you were to simply guess the median auction price for all the pieces of equipment in the test set you would get an RMSLE of about 0.7.
 
+## Interpreting our Results
 
+This root mean squared log error signifies that our model predicts a sale price that is within 1 order of magnitude of the actual price. Although there is plenty of room for improvement, we're able to get 'in-the-ballpark' of the sale price, so that our customer will have an idea of how much their heavy machinery will sell for.
 
 ## Future Considerations
 
