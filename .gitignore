@@ -2,3 +2,4 @@
 data/
 # Ignore Files
 .ipynb_checkpoints
+.DS_Store
