@@ -1,27 +1,35 @@
-![Regression CS Header](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/regressionedaheader.png)
+![Regression CS Header](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/regressionedaheader.png)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Maintained%3F-Presented!-blue?style=flat-square"></img>
-  <img src="https://img.shields.io/badge/Dream%20Team-YES-green?style=flat-square"></img>
+  <img src="https://img.shields.io/badge/Maintained%3F-In Progress-green?style=flat-square"></img>
 </p>
 
-### Contributors
-|  [Feli Gentle](https://github.com/oro13)  |
- [Tyler Woods](https://github.com/tylerjwoods)  |
- [Wesley Nguyen](https://github.com/boogiedev)  |
-   
----
 
-## Sections:
- |  **[Introduction](#introduction)**  |
- **[Plan of Attack](#plan-of-attack)**  |
- **[Analysis & Modeling](#analysis-and-modeling)**  |
- **[Performance](#performance)**  |
- **[Takeaways](#takeaways)**  |
+## Team
 
----
+[Feli Gentle](https://github.com/oro13)  | [Tyler Woods](https://github.com/tylerjwoods) | [Wesley Nguyen](https://github.com/boogiedev)
+---|---|---|
 
-## Introduction
+
+ 
+## Table of Contents
+
+- [Basic Overview](#basic-overview)
+- [Exploring Data](#exploring-data)
+  - [Initial Intake](#initial-intake)
+  - [Feature Engineering](#feature-engineering)
+  - [Visualizations](#visualizations)
+- [Predictive Modeling](#predictive-modeling)
+  - [Baseline](#baseline)
+  - [Evaluation](#evaluation)
+  - [Tuning](#tuning)
+- [Performance](#performance)
+- [Future Considerations](#future-considerations)
+- [License](#license)
+- [Credits](#credits)
+- [Thanks](#thanks)
+
+## Basic Overview
 
 **Main Goal:** <br>
 Predict the sale price of a particular piece of equipment at auction based on it's usage, equipment type, and configuration. <br>
@@ -38,16 +46,12 @@ where *p<sub>i</sub>* are the predicted values (predicted auction sale prices)
 and *a<sub>i</sub>* are the actual values (the actual auction sale prices).
 
 
----
-
-## Plan of Attack
+## Exploring Data
 
 <img align="right" src="https://image.flaticon.com/icons/svg/81/81203.svg" width="100" height="100">
 Initally going into this case study, we decided to tackle the tasks of cleaning the data, and getting a baseline model together as a group. We did this to ensure that everyone was on the same level of understanding before we delved into partitioned tasks.
 
-<br>
-<br>
-<br>
+### Initial Intake
 
 **Initial Data**
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/dirtydata.png"></img>
@@ -75,6 +79,16 @@ df.drop(columns=['UsageBand','Blade_Extension', 'Blade_Width', 'Enclosure_Type',
                     ], inplace=True)
 ```
 
+
+
+
+Product Size             |  Ripper Values
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png)  |  ![](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheRipperVal.png)
+
+
+### Feature Engineering
+
 **Cleaning Functions:**
 ```python
 def getNullCount(df:pd.DataFrame) -> None:
@@ -92,28 +106,22 @@ def set_ohe(df:pd.DataFrame, col_name:str) -> None:
         df[f"{col_name}: {val}"] = df[col_name].map(lambda x: 1.0 if x==val else 0.0)
 ```
 
-<br>
 
 **One Hot Encoding:**
 We noticed that there were groupings of items within certain columns and decided to use OHE to convert these values to binary values.
 
-<br>
-
-
-Product Size             |  Ripper Values
-:-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheProductSize.png)  |  ![](https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/oheRipperVal.png)
-
-
-<br>
 
 **Cleaned Data**
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/cleandata.png"></img>
 
 
----
+### Visualzations
 
-## Analysis and Modeling
+
+---
+## Predictive Modeling
+
+### Baseline
 
 **Baseline Model: Linear Regression**
 
@@ -126,14 +134,12 @@ y = clean_df['SalePrice']
 
 summary_model(X, y)
 ```
-<details open>
+<details>
   <summary>
     OLS Summary 
   </summary>
 <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/olssummary.png"></img>
 </details>
-
-<br>
 
 
 ```python
@@ -146,14 +152,12 @@ plt.show()
 ```
 > To get a sense of what the distribution of our target values were, we plotted it in a histogram
 
-<details open>
+<details>
   <summary>
     Sales Price Histogram
   </summary>  
   <img src="https://raw.githubusercontent.com/boogiedev/regression-case-study/master/images/prelogTargetHist.png"></img>
 </details>
-
-<br>
 
 ```python
 # Split up Data Between Features (X) and SalePrice, i.e. the Target Values (y))
@@ -166,7 +170,7 @@ plt.show()
 ```
 > As seen below, the distribution of the target values are bunched to the left, so we needed to find a way to center the mean in order to create a more accurate model
 
-<details open>
+<details>
   <summary>
     Sales Price Histogram (Log)
   </summary>  
@@ -255,11 +259,8 @@ train_cv_errors, test_cv_errors
         0.03680484, 0.03665091, 0.03649925, 0.03690903, 0.03691538]))
 ```
 
+### Evaluation
 
-
----
-
-## Performance
 
 **OLS Summary on Features**<br>
 <img src="https://github.com/boogiedev/regression-case-study/blob/master/images/olsBetaResults.png" > </img>
@@ -284,7 +285,15 @@ model.fit(X_train, y_train)
 ```
 <img src="https://github.com/boogiedev/regression-case-study/blob/master/images/pipeline.png"></img>
 
-<br>
+
+
+### Tuning
+
+
+
+---
+## Performance
+
 
 **Model Prediction** <br>
 ```python
@@ -307,12 +316,21 @@ Using data from the file data/test.csv, we used our model to obtain an RMSLE of 
 Note: The best RMSLE was only 0.23 (obviously lower is better).  Note that if you were to simply guess the median auction price for all the pieces of equipment in the test set you would get an RMSLE of about 0.7.
 
 
----
 
-## Takeaways 
+## Future Considerations
 
 Cleaning the data and finding the important columns was the biggest hurdle. We decided to do one-hot-encoding for multiple columns of the dataset and drop most of the other columns.
 
 Once we felt that we had a data set that was cleaned and ready, using different models was quick.
 
----
+
+## License
+[MIT ©](https://choosealicense.com/licenses/mit/)
+
+## Credits
+
+
+## Thanks
+
+
+
