@@ -6,6 +6,7 @@ import re
 def set_ohe(df:pd.DataFrame, col_name:str):
     for val in df[col_name].value_counts().index:
         df[f"{col_name}: {val}"] = df[col_name].map(lambda x: 1.0 if x==val else 0.0 )
+    df.drop(df.columns[-1], axis=1, inplace=True)
     return df
         
 def getReMax(val:str) -> np.float:
@@ -28,7 +29,10 @@ def clean_df(df):
     
     # Find the logs of target values, SalePrice
     
-    df['SalePrice'] = np.log(df['SalePrice'])
+    try:
+        df['SalePrice'] = np.log(df['SalePrice'])
+    except:
+        pass
     
     # Convert MachineHoursCurrent Meter "NaN" values to the average value
     df['MachineHoursCurrentMeter'].fillna(df['MachineHoursCurrentMeter'].mean(), inplace=True)
