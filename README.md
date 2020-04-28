@@ -14,7 +14,7 @@
  
 ## Table of Contents
 
-- [Basic Overview](#basic-overview)
+- [Overview](#overview)
 - [Exploring Data](#exploring-data)
   - [Initial Intake](#initial-intake)
   - [Feature Engineering](#feature-engineering)
