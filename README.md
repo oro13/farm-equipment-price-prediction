@@ -32,10 +32,10 @@
 ## Overview
 
 **Main Goal:** <br>
-Predict the sale price of a particular piece of equipment at auction based on it's usage, equipment type, and configuration. <br>
+Predicting the sales price of a particular piece of equipment at auction, based on it's usage, equipment type, and configuration, and other available features. <br>
 
 **Business Context:**<br>
-Whether you're buying, selling, or analyzing market dynamics towards other strategic ends, a predicting sales prices is a valuable insight for a business. 
+Whether you're buying, selling, or analyzing market dynamics towards other strategic ends, predicting sales prices is a valuable insight for a business. 
 
 When analyzing a business's own inventory, a reliable price prediction model can help when creating annual budgets and projecting income and revenue. Moreover, the information gained sheds light on what item features tend to have the biggest impact on revenue at auction time. Knowing what features to focus can inform building and maintaining an inventory that holds value over time.
 
@@ -45,7 +45,7 @@ Let's look further at how we built our predictive model.
 
 *Note: This data consists of data from auction postings and sales prices. It includes information on the usage and specifications of the machinery.*
 
-**Evaluation:**<br>
+**Evaluating Success:**<br>
 The evaluation of our model will be based on Root Mean Squared Log Error.<br>
 Which is computed as follows:
 
