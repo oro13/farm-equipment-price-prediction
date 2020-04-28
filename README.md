@@ -14,7 +14,7 @@
  
 ## Table of Contents
 
-- [Basic Overview](#basic-overview)
+- [Overview](#overview)
 - [Exploring Data](#exploring-data)
   - [Initial Intake](#initial-intake)
   - [Feature Engineering](#feature-engineering)
@@ -29,14 +29,23 @@
 - [Credits](#credits)
 - [Thanks](#thanks)
 
-## Basic Overview
+## Overview
 
 **Main Goal:** <br>
-Predict the sale price of a particular piece of equipment at auction based on it's usage, equipment type, and configuration. <br>
+Predicting the sales price of a particular piece of equipment at auction, based on it's usage, equipment type, and configuration, and other available features. <br>
 
-*Note: This data is sourced from auction results postings and includes information on usage and equipment configurations.*
+**Business Context:**<br>
+Whether you're buying, selling, or analyzing market dynamics towards other strategic ends, predicting sales prices is a valuable insight for a business. 
 
-**Evaluation:**<br>
+When analyzing a business's own inventory, a reliable price prediction model can help when creating annual budgets and projecting income and revenue. Moreover, the information gained sheds light on what item features tend to have the biggest impact on revenue at auction time. Knowing what features to focus can inform building and maintaining an inventory that holds value over time.
+
+Knowing the projected prices of other business's items can inform what a fair market value is when growing one's inventory. This insight can additionally help with budgeting and negotiation when purchasing.
+
+Let's look further at how we built our predictive model.
+
+*Note: This data consists of data from auction postings and sales prices. It includes information on the usage and specifications of the machinery.*
+
+**Evaluating Success:**<br>
 The evaluation of our model will be based on Root Mean Squared Log Error.<br>
 Which is computed as follows:
 
@@ -315,7 +324,9 @@ Using data from the file data/test.csv, we used our model to obtain an RMSLE of 
 
 Note: The best RMSLE was only 0.23 (obviously lower is better).  Note that if you were to simply guess the median auction price for all the pieces of equipment in the test set you would get an RMSLE of about 0.7.
 
+## Interpreting our Results
 
+This root mean squared log error signifies that our model predicts a sale price that is within 1 order of magnitude of the actual price. Although there is plenty of room for improvement, we're able to get 'in-the-ballpark' of the sale price, so that our customer will have an idea of how much their heavy machinery will sell for.
 
 ## Future Considerations
 
