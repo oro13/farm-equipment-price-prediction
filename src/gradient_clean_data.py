@@ -67,7 +67,7 @@ def gradient_clean_Xy(df:pd.DataFrame) -> tuple:
     df_cop["Tire_Size"] = pd.to_numeric(df_cop["Tire_Size"].map(lambda x: "Unspecified" if (pd.isnull(x) or x == "None or Unspecified") else getReMax(x) if (x == "10 inch") else x), errors='coerce', downcast='float')
     df_cop["Undercarriage_Pad_Width"] = pd.to_numeric(df_cop["Undercarriage_Pad_Width"].map(lambda x: np.nan if (x == "None or Unspecified") else getReMax(x) if (x != "31.5 inch" and pd.notnull(x)) else 31.5), errors='coerce', downcast='float')
     df_cop["Stick_Length"] = df_cop["Stick_Length"].map(lambda x: np.nan if (x == "None or Unspecified") else decimalize_feet(x))
-    
+    df_cop["YearMade"] = df_cop["YearMade"].map(lambda x: np.nan if x == 1000 else x)
     
     'CONSISTENCY'
     
