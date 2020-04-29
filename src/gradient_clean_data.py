@@ -5,7 +5,7 @@ import re
 from sklearn.preprocessing import LabelEncoder
 from src.helpers import *
 
-def gradient_clean_Xy(df:pd.DataFrame) -> tuple:
+def gradient_clean_Xy(df:pd.DataFrame, naFill:bool=True, naVal:int=-10000) -> tuple:
     """Specifically cleans heavy machinery dataset and returns X and y as data and target"""
     # Copy Dataframe
     df_cop = df.copy()
@@ -103,6 +103,10 @@ def gradient_clean_Xy(df:pd.DataFrame) -> tuple:
     
     'RENAME COLUMNS FOR CLARITY'
 #     df_cop = df_cop.rename(columns={'fiModelDesc': 'Model Description'})
+    
+    'FILL NaNs with -10000'
+    if naFill:
+        X.fillna(value=naVal, inplace=True)
     
     # Return train/target split
     X = df_cop
