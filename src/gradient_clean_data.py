@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from src.helpers import *
 
 def gradient_clean_Xy(df:pd.DataFrame) -> tuple:
+    """Specifically cleans heavy machinery dataset and returns X and y as data and target"""
     # Copy Dataframe
     df_cop = df.copy()
     
