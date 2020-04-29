@@ -104,9 +104,9 @@ def gradient_clean_Xy(df:pd.DataFrame, naFill:bool=True, naVal:int=-10000) -> tu
     'RENAME COLUMNS FOR CLARITY'
 #     df_cop = df_cop.rename(columns={'fiModelDesc': 'Model Description'})
     
-    'FILL NaNs with -10000'
+    'FILL NaNs with naVal'
     if naFill:
-        X.fillna(value=naVal, inplace=True)
+        df_cop.fillna(value=naVal, inplace=True)
     
     # Return train/target split
     X = df_cop
