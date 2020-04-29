@@ -37,7 +37,7 @@ Predicting the sales price of a particular piece of equipment at auction, based 
 **Business Context:**<br>
 Whether you're buying, selling, or analyzing market dynamics, predicting sales prices is a valuable insight for a business. 
 
-When analyzing a business's own inventory, a reliable price prediction model can help when creating annual budgets and projecting income and revenue. Moreover, the information gained sheds light on what item features tend to have the biggest impact on revenue at auction time. Knowing what features to focus can inform building and maintaining an inventory that holds value over time.
+When analyzing a business's own inventory, a reliable price prediction model can inform annual budgets and projected revenue. Additionally, the information gained sheds light on what it is about an item that tends to have the biggest impact on sale price at auction time. Knowing these features can inform a business on how to build and maintain an inventory that holds value over time.
 
 Knowing the projected prices of other business's items can inform what a fair market value is when growing one's inventory. This insight can additionally help with budgeting and negotiation when purchasing.
 
