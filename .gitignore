@@ -1,5 +1,6 @@
 # Ignore Folders
 data/
+__pychache__
 # Ignore Files
 .ipynb_checkpoints
 .DS_Store
